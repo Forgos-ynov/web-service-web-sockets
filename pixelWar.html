@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pixel War</title>
+        <style>
+            .container {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            #canvas {
+                border: 1px solid black
+            }
+
+            #clear_board_btn {
+                background-color: white;
+                font-size: 24px;
+                position: fixed;
+                top: 100px;
+                cursor: pointer;
+                border: 1px solid black;
+                border-radius: 8px;
+            }
+
+            .palette {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chat {
+                background-color: red;
+                text-align: end;
+            }
+
+            .width {
+                width: 200px;
+            }
+
+            .border {
+                border: 5px solid;
+                padding: 3px;
+                width: fit-content;
+                margin: 8px 0;
+                cursor: pointer;
+            }
+
+            .canvas {
+                display: flex;
+                justify-content: center;
+            }
+
+            .rouge {
+                border-color: rgb(219, 22, 52);
+            }
+            .rouge:hover {
+                background-color: rgb(219, 22, 52);
+                color: white;
+            }
+
+            .jaune {
+                border-color: rgb(234, 255, 19);
+            }
+            .jaune:hover {
+                background-color: rgb(234, 255, 19);
+                color: white;
+            }
+
+            .vert {
+                border-color: rgb(61, 233, 53);
+            }
+            .vert:hover {
+                background-color: rgb(61, 233, 53);
+                color: white;
+            }
+
+            .noir {
+                border-color: rgb(0, 0, 0);
+            }
+            .noir:hover {
+                background-color: rgb(0, 0, 0);
+                color: white;
+            }
+
+            .violet {
+                border-color: rgb(159, 41, 180);
+            }
+            .violet:hover {
+                background-color: rgb(159, 41, 180);
+                color: white;
+            }
+
+            .bleu {
+                border-color: rgb(1, 32, 206);
+            }
+            .bleu:hover {
+                background-color: rgb(1, 32, 206);
+                color: white;
+            }
+
+            .rainbow {
+                color: white;
+                border-color: transparent;
+                background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title" style="text-align: center"></h1>
+        <div class="container">
+            <div class="palette width">
+                <div class="border rouge">Rouge</div>
+                <div class="border jaune">Jaune</div>
+                <div class="border vert">Vert</div>
+                <div class="border bleu">Bleu</div>
+                <div class="border violet">Violet</div>
+                <div class="border noir">Noir</div>
+                <div class="border rainbow">Rainbow</div>
+            </div>
+            <div class="canvas">
+                <button id="clear_board_btn">Nuke bomb</button>
+                <canvas id="canvas" width="500" height="500"></canvas>
+            </div>
+            <div class="chat width">
+Il manque le chat
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
